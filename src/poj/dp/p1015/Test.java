@@ -17,6 +17,9 @@ public class Test {
 		Random rand = new Random();
 		
 		for(int r = 0; r < 5; r++){//round
+			if( r != 0){
+				input.append("\n");
+			}
 			//header
 			int n = 150+rand.nextInt(20);
 			int m = 15+rand.nextInt(4);

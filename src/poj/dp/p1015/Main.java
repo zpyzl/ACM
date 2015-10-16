@@ -2,6 +2,7 @@ package poj.dp.p1015;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,10 +10,12 @@ import java.util.List;
 public class Main {
 	
 	public static void main(String[] args) throws IOException {
-		
+		f(System.in);
+	}
+	public static void f(InputStream in) throws IOException{
 		BufferedReader stdin = 
 	            new BufferedReader(
-	                new InputStreamReader(System.in));
+	                new InputStreamReader(in));
 		
 		List<Round> rounds = new ArrayList<Round>();
 		
@@ -20,7 +23,7 @@ public class Main {
 		String line = stdin.readLine();
 		
 		Round round = null;
-	    while(!"0 0".equals(line)){
+	    while(true){
 	    	String[] split = line.split(" ");
 	    	//n m
 	    	if( ifHeader ){
@@ -51,8 +54,6 @@ public class Main {
 	    	}
 	    	line = stdin.readLine();
 	    }
-	    stdin.close();
-	    return;
 	}
 	
 }
@@ -61,7 +62,7 @@ class Round{
 	private int roundNum = ++roundCount;
 	
 	private int m;
-	private int n=m+1;
+	private int n;
 	private int nFinal;
 	private int pairsCount=0;
 	private List<Pair> pairs;
@@ -69,6 +70,7 @@ class Round{
 	
 	Round(int m, int nFinal){
 		this.m = m;
+		this.n = m+1;
 		this.nFinal = nFinal;
 		pairs = new ArrayList<Pair>();
 	}
@@ -113,16 +115,14 @@ class Round{
 	}
 	public void cal( ){
 		
-		List<Chosen> smallChosen = null;//m-1 chosen
-		List<Chosen> chosenList = null;
-		chosenList = initChosenList(chosenList);
+		List<Chosen> fewerChosen = initFewerChosenList();
+		initChosenList();
 		
 		while( n < nFinal){
 			n++;
 
-			//新的一对和chosen列表组成新的chosen列表
-			getNewChosenList(chosenList, pairs.get(n-1));
-			
+			//新的一对和fewerChosen列表组成新的chosen列表
+			getNewChosenList(fewerChosen, pairs.get(n-1));
 		}
 		printRes();
 	}
@@ -132,23 +132,18 @@ class Round{
 		
 	}
 	
-	private void getNewChosenList(List<Chosen> chosenList, Pair newPair,
-			boolean getOpt){
-		boolean optInited = false;
-		for( Chosen chosen: chosenList){
+	private void getNewChosenList(List<Chosen> fewerChosen, Pair newPair){
+		for( Chosen chosen: fewerChosen){
 			// chosen added by new pair
-			chosen.inc(newPair);
+			chosen.addPair(newPair);
 			
-			if( getOpt){
-				optInited = findOpt( chosen, optInited );
-			}
+			findOpt( chosen );
 		}
 	}
 	
-	private boolean findOpt(Chosen chosen,boolean init ){
-		if( !init){
+	private void findOpt(Chosen chosen ){
+		if( optChosen == null){
 			optChosen = chosen;
-			init = true;
 		}else{
 			//新的chosen列表中找出最优的
 			if( chosen.getDiff() < optChosen.getDiff() || 
@@ -157,17 +152,44 @@ class Round{
 				optChosen = chosen;
 			}
 		}
-		return init;
 	}
 	
-	private List<Chosen> initChosenList(List<Chosen> chosenList){
-		chosenList = new ArrayList<Chosen>();
-		for(int i = 0 ; i < n;i++){
-			Pair pair = pairs.get(i);
-			Chosen chosen = new Chosen();
-			chosen.inc(pair);
+	//choose m-1 from m+1
+	private List<Chosen> initFewerChosenList( ){
+		List<Chosen> chosenList = new ArrayList<Chosen>();
 		
+		for(int notChosenIdx1 = 1 ; notChosenIdx1 <= n;notChosenIdx1++){
+			for(int notChosenIdx2 = 1 ; notChosenIdx2 <= n;notChosenIdx2++){
+				//一个chose, 去除n选2的选择
+				if( notChosenIdx1 != notChosenIdx2){
+					Chosen chosen = new Chosen();
+					for( int lineNume = 1 ; lineNume <= n;lineNume++){
+						if( lineNume != notChosenIdx1 &&
+							lineNume != notChosenIdx2)
+							chosen.addLine(lineNume);
+					}
+					chosen.cal(pairs);
+					chosenList.add(chosen);
+				}
+			}
+		}
+		return chosenList;
+	}
+	
+	//choose m from m+1
+	private List<Chosen> initChosenList(){
+		List<Chosen> chosenList = new ArrayList<Chosen>();
+		for(int notChosenIdx = 1 ; notChosenIdx <= n;notChosenIdx++){
+			Chosen chosen = new Chosen();
+			for( int lineNume = 1 ; lineNume <= n;lineNume++){
+				if( lineNume != notChosenIdx ){
+					chosen.addLine(lineNume);
+				}
+			}
+			chosen.cal(pairs);
 			chosenList.add(chosen);
+			
+			findOpt(chosen);
 		}
 		return chosenList;
 	}
@@ -179,18 +201,45 @@ class Chosen{
 	private int dSum = 0;
 	private int pSum = 0;
 	private int diff ;
+	private int plus ;
 	
-	public void inc(Pair newPair){
+	public void addLine(int lineIdx){
+		chosenIdxs.add(lineIdx);
+	}
+	public void cal(List<Pair> pairs){
+		if( pairs.size() != 0){
+			for( Integer lineNum :chosenIdxs){
+				if( lineNum >= 1){
+					Pair pair = pairs.get(lineNum-1);
+					dSum += pair.getDv();
+					pSum += pair.getPv();
+				}
+			}
+			this.diff = abs(dSum-pSum);
+			this.plus = dSum+pSum;
+		}
+	}
+	public void addPair(Pair newPair){
 		this.dSum += newPair.getDv();
 		this.pSum += newPair.getPv();
 		this.diff = abs(dSum-pSum);
+		this.plus = dSum+pSum;
 		chosenIdxs.add(newPair.getLineNum());
 	}
+	
+	public List<Integer> getChosenIdxs() {
+		return chosenIdxs;
+	}
+
+	public void setChosenIdxs(List<Integer> chosenIdxs) {
+		this.chosenIdxs = chosenIdxs;
+	}
+
 	public int getDiff(){
 		return this.diff;
 	}
 	public int getPlus(){
-		return dSum+pSum;
+		return plus;
 	}
 	
 	public static int abs(int a){
@@ -202,19 +251,19 @@ class Chosen{
 	
 	public String toString(){
 		String res = 
-				"Best jury has value "+this.pSum+
-				" for prosecution and value "+this.dSum+
+				"Best jury has value "+this.dSum+
+				" for prosecution and value "+this.pSum+
 				" for defence:\n";
 		for(Integer i: chosenIdxs){
 			res += " " + Integer.toString(i);
 		}
-		res += "\n\n";
+		res += "\n";
 		return res;
 	}
 }
 
 class Pair{
-	private int lineNum;
+	private int lineNum;//from 1
 	private int dv;
 	private int pv;
 	
