@@ -1,4 +1,4 @@
-package poj.dp.p1015;
+package dp.poj.p1015;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
