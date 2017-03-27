@@ -10,7 +10,9 @@ import java.util.List;
 public class Main {
 	
 	public static void main(String[] args) throws IOException {
+		//long point1 = getMemory();
 		f(System.in);
+		//long point2 = getMemory();
 	}
 	public static void f(InputStream in) throws IOException{
 		BufferedReader stdin = 
@@ -56,6 +58,11 @@ public class Main {
 	    }
 	}
 	
+	public static long getMemory() {
+		long mem = Runtime.getRuntime().freeMemory();
+		return mem;
+	}
+	
 }
 class Round{
 	private static int roundCount = 0;
@@ -70,7 +77,11 @@ class Round{
 	
 	Round(int m, int nFinal){
 		this.m = m;
-		this.n = m+1;
+		if( nFinal == m ){
+			this.n = m;
+		}else{
+			this.n = m+1;
+		}
 		this.nFinal = nFinal;
 		pairs = new ArrayList<Pair>();
 	}
@@ -114,15 +125,23 @@ class Round{
 		this.pairsCount = pairsCount;
 	}
 	public void cal( ){
+		if( n == m ){
+			this.optChosen = new Chosen();
+			for( Pair pair: this.pairs){
+				this.optChosen.addPair(pair);
+			}
+			this.optChosen.cal(pairs);
+		}else{
 		
-		List<Chosen> fewerChosen = initFewerChosenList();
-		initChosenList();
-		
-		while( n < nFinal){
-			n++;
-
-			//新的一对和fewerChosen列表组成新的chosen列表
-			getNewChosenList(fewerChosen, pairs.get(n-1));
+			List<Chosen> fewerChosen = initFewerChosenList();
+			initChosenList();
+			
+			while( n < nFinal){
+				n++;
+	
+				//新的一对和fewerChosen列表组成新的chosen列表
+				getNewChosenList(fewerChosen, pairs.get(n-1));
+			}
 		}
 		printRes();
 	}

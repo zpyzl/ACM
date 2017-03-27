@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Random;
 
-public class Test {
+public class TestCase {
 
 	public static void main(String[] args) throws IOException {
 		Main.f(genInput());
@@ -16,18 +16,18 @@ public class Test {
 		
 		Random rand = new Random();
 		
-		for(int r = 0; r < 5; r++){//round
+		for(int r = 0; r < 9999; r++){//round
 			if( r != 0){
 				input.append("\n");
 			}
 			//header
-			int n = 150+rand.nextInt(20);
-			int m = 15+rand.nextInt(4);
+			int m = 1+rand.nextInt(20);
+			int n = m+rand.nextInt(181);
 			input.append(n+" "+m+"\n");
 			
 			for( int l = 0; l < n;l++){
-				int d = rand.nextInt(20);
-				int p = rand.nextInt(20);
+				int d = rand.nextInt(21);
+				int p = rand.nextInt(21);
 				input.append(d+" "+p+"\n");
 			}
 		}
