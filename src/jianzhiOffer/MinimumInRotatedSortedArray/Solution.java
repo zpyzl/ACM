@@ -1,5 +1,9 @@
 package jianzhiOffer.MinimumInRotatedSortedArray;
 
+import junit.framework.Assert;
+
+import org.junit.Test;
+
 public class Solution {
     public int findMin(int[] nums) {
     	
@@ -11,9 +15,9 @@ public class Solution {
     	
     	if( len == 1)
     		return nums[begin];
-    	if( len == 2)
-    		return nums[begin+1];
-    	if( len == 3){
+    	if( len == 2){
+    		return nums[begin] < nums[begin+1] ? nums[begin] : nums[begin+1];
+    	}else if( len == 3){
     		if( nums[begin] > nums[begin+1])
     			return nums[begin+1];
     		else if( nums[begin+1] > nums[begin+2])
@@ -23,32 +27,32 @@ public class Solution {
     	}
     	
     	InsertRes res1, res2, res3;
-    	res1 = insertStub(nums, len/2/2) ;
+    	res1 = insertStub(nums, begin+len/2/2) ;
     	if( res1.min != null )
     		return res1.min;
-    	res2 = insertStub(nums,len/2) ;
+    	res2 = insertStub(nums,begin+len/2) ;
     	if( res2.min != null )
     		return res2.min;
-    	res3 = insertStub(nums,len*3/4);
+    	res3 = insertStub(nums,begin+len*3/4);
 		if( res3.min != null )
     		return res3.min;
 		
 		if( res1.insertPoint < res2.insertPoint && res2.insertPoint < res3.insertPoint){
-			Integer r1 = insert3Stubs( nums, begin, len/2/2 );
+			Integer r1 = insert3Stubs( nums, begin, begin+len/2/2+1 );
 			if( r1 == null )
-				return insert3Stubs( nums, len*3/4, len );
+				return insert3Stubs( nums, begin+len*3/4, end );
 			else 
 				return r1; 
 		}
 		if( res1.insertPoint < res2.insertPoint && res2.insertPoint > res3.insertPoint
-				&& res1.insertPoint > res3.insertPoint )
-			return insert3Stubs( nums, len/2 , len*3/4 );
-		
-		if( res1.insertPoint > res2.insertPoint && res2.insertPoint < res3.insertPoint
-				&& res1.insertPoint > res3.insertPoint )
-			return insert3Stubs( nums, len/2/2 , len/2 );
-		
-		return null;
+				&& res1.insertPoint > res3.insertPoint ){
+			return insert3Stubs( nums, begin+len/2 , begin+len*3/4+1 );
+		}else if( res1.insertPoint > res2.insertPoint && res2.insertPoint < res3.insertPoint
+				&& res1.insertPoint > res3.insertPoint ){
+			return insert3Stubs( nums, begin+len/2/2 , begin+len/2+1 );
+		}else{
+			return nums[begin];
+		}
     }
 
 	private InsertRes insertStub(int[] nums, int i) {
@@ -61,6 +65,32 @@ public class Solution {
 			return res;
 		}
 	}
+	
+	@Test
+	public void test1(){
+		int[] a = {1,2,3,4,5};
+		Solution s = new Solution();
+		Assert.assertEquals(1, s.findMin(a));
+	}
+	@Test
+	public void test2(){
+		int[] a = {4,5,1,2,3};
+		Solution s = new Solution();
+		Assert.assertEquals(1, s.findMin(a));
+	}
+	@Test
+	public void test3(){
+		int[] a = {3,4,5,6,7,1,2};
+		Solution s = new Solution();
+		Assert.assertEquals(1, s.findMin(a));
+	}
+	@Test
+	public void test4(){
+		int[] a = {5,1,2,3,4};
+		Solution s = new Solution();
+		Assert.assertEquals(1, s.findMin(a));
+	}
+	
 }
 
 class InsertRes{
