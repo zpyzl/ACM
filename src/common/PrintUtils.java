@@ -11,4 +11,7 @@ public class PrintUtils {
             n = n.next;
         }
     }
+    public void bar(){
+
+    }
 }
