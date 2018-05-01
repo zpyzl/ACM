@@ -1,8 +1,7 @@
-package dp.leetcode.Zigzag103;
+package dp.leetcode.bfs.Zigzag103;
 
 import dp.leetcode.BinaryTreePostorderTraversal.TreeNode;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
@@ -11,7 +10,7 @@ import java.util.Stack;
  * Created by zpy on 2018/5/1.
  */
 class Solution {
-    List<List<Integer>> res = new ArrayList<>();
+    List<List<Integer>> res = new LinkedList<>();
     MyStack<TreeNode> stack = new MyStack<TreeNode>();
 
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
@@ -22,7 +21,7 @@ class Solution {
     }
     private void zigZag1Line(boolean ifZig){
         MyStack<TreeNode> nextStack = new MyStack<TreeNode>();
-        List<Integer> lineVisit = new ArrayList<>();
+        List<Integer> lineVisit = new LinkedList<>();
         if( stack.isEmpty()){
             return ;
         }
