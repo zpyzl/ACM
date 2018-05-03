@@ -4,6 +4,9 @@
 
 # IntelliJ project files
 .idea
+.settings
 *.iml
+.classpath
+.project
 out
 gen
