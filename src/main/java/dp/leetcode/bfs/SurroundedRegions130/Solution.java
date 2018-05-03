@@ -19,25 +19,13 @@ public class Solution {
         }
         //把和边界上O相连的O标记成S，表示不改X的。
         // 遍历边界（除了4个角）
-        for( int i = 1 ; i < m - 1 ; i++ ) {
-            if (board[i][0] == 'O') {
-                board[i][0] = 'S';
-                markStable(board, i, 1);
-            }
-            if (n - 1 > 0 && board[i][n - 1] == 'O') {
-                board[i][n - 1] = 'S';
-                markStable(board, i, n - 2);
-            }
+        for( int i = 0 ; i < m  ; i++ ) {
+            markStable(board, i, 0);
+            markStable(board, i, n - 1 );
         }
-        for( int i = 1 ; i < n - 1 ; i++ ) {
-            if( board[0][i] == 'O'){
-                board[0][i] = 'S';
-                markStable(board, 1,i);
-            }
-            if( m - 1 > 0 && board[m - 1][i] == 'O'){
-                board[m - 1][i] = 'S';
-                markStable(board, m - 2,i);
-            }
+        for( int i = 0 ; i < n ; i++ ) {
+            markStable(board,0,i);
+            markStable(board,m - 1,i);
         }
         //剩下的O都可以替换成X
         replace(board, 'O','X');
@@ -45,7 +33,7 @@ public class Solution {
 
     }
     void markStable(char[][] board, int i, int j){
-        if( i >= m - 1 || j >= n - 1 || j <= 0 || i <= 0 || board[i][j] == 'X') {//碰到边界，返回
+        if( i >= m - 1 || j >= n - 1 || j <= 0 || i <= 0 || board[i][j] == 'X'|| board[i][j] == 'S') {//碰到边界，返回
             return;
         }
         if( board[i][j] == 'O' ) {
