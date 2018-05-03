@@ -1,14 +1,17 @@
 package dp.leetcode.bfs.SurroundedRegions130;
 
 /**
- * Created by zpy on 2018/5/2.
+ * Created by zhaopengyang on 2018/5/3.
  */
-public class Solution {
+public class CplcSolution {
+    /*
+            这个正向解法麻烦，Stack Overflow
     int m;
     int n;
     boolean foundO = false;
     boolean failed = false;
     public void solve(char[][] board) {
+
         m = board.length;
         if( m == 0 )
             return;
@@ -32,7 +35,7 @@ public class Solution {
         if( failed || board[i][j] == 'X' ) {
             return;
         }
-        if( i >= m - 1 || j >= n - 1) {//碰到边界，失败
+        if( i >= m - 1 || j >= n - 1 || j <= 0 || i <= 0 ) {//碰到边界，失败
             replaceH(board,'O');
             failed = true;
             return;
@@ -40,8 +43,10 @@ public class Solution {
         if( board[i][j] == 'O' ){
             board[i][j] = 'h';
             foundO = true;
-            halfMark(board, i + 1, j);//上面左面都遍历过了
-            halfMark(board, i, j + 1);//上面左面都遍历过了
+            halfMark(board, i + 1, j);//虽然上面左面都遍历过了，但是从一个节点开始，要判断它还是要综合上下左右的信息。
+            halfMark(board, i - 1, j);//或者维护一个遍历过的节点列表
+            halfMark(board, i, j + 1);
+            halfMark(board, i, j - 1);
         }
 
     }
@@ -54,7 +59,5 @@ public class Solution {
             }
         }
     }
-
-
-
+*/
 }
