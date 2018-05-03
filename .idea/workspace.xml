@@ -2,50 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="820fe6e8-b597-406f-b555-05cce50df943" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dp/leetcode/bfs/SurroundedRegions130/CplcSolution.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Challenge.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Array2dUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/ListNode.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/PrintUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/commonAlgorithms/BinaryTreeAlgorithms.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/commonAlgorithms/BinaryTreeNode.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/commonAlgorithms/CollectVisit.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/commonAlgorithms/GraphAlgorithms.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/commonAlgorithms/Node.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dp/leetcode/BinaryTreePostorderTraversal/Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dp/leetcode/BinaryTreePostorderTraversal/TreeNode.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dp/leetcode/bfs/NumberOfIslands200/Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dp/leetcode/bfs/NumberOfIslands200/Test.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dp/leetcode/bfs/SurroundedRegions130/Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dp/leetcode/bfs/SurroundedRegions130/Test.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dp/leetcode/bfs/Zigzag103/Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dp/leetcode/bfs/rightSideView199/Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dp/leetcode/bfs/rightSideView199/Test.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dp/leetcode/editDistance/Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dp/leetcode/editDistance/Test.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dp/leetcode/pow/Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dp/leetcode/regularExp/Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dp/poj/p1015/Main.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dp/poj/p1015/TestCase.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jianzhiOffer/ConstructBinaryTree.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jianzhiOffer/MinimumInRotatedSortedArray/Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jianzhiOffer/MinimumInRotatedSortedArray/微信图片_20170330005907.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jianzhiOffer/OddEvenLinkedList/Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jianzhiOffer/fibonacciIterative/Solution.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jianzhiOffer/queueByStacks_7/MyQueue.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/miscellaneous/basicAlgorithms/mySort/MySort.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/selfMng/Challenge.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/selfMng/ImYours_clip.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/selfMng/InputMonitor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/selfMng/PokerFace_clip.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/selfMng/ScheduleLearnAndFree.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/selfMng/SimpleTime.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/selfMng/SimpleTimes.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ACM.iml" afterPath="$PROJECT_DIR$/ACM.iml" />
     </list>
     <ignored path="ACM.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,8 +28,8 @@
           <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/dp/leetcode/bfs/SurroundedRegions130/Solution.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="223">
-                  <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+                <state relative-caret-position="286">
+                  <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
                   <folding />
                 </state>
               </provider>
@@ -97,7 +54,7 @@
           <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/dp/leetcode/bfs/SurroundedRegions130/Test.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="332">
+                <state relative-caret-position="508">
                   <caret line="42" column="11" lean-forward="true" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
                   <folding />
                 </state>
@@ -162,8 +119,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/common/Array2dUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/dp/leetcode/bfs/SurroundedRegions130/CplcSolution.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dp/leetcode/bfs/SurroundedRegions130/Solution.java" />
         <option value="$PROJECT_DIR$/src/main/java/dp/leetcode/bfs/SurroundedRegions130/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dp/leetcode/bfs/SurroundedRegions130/Solution.java" />
       </list>
     </option>
   </component>
@@ -1010,7 +967,14 @@
       <option name="project" value="LOCAL" />
       <updated>1525331499667</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="before brute but concise">
+      <created>1525340201892</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1525340201892</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1064,7 +1028,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.51492536" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.265506" sideWeight="0.4936034" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.49093816" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297062" sideWeight="0.49093816" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.48294243" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1072,7 +1036,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.4978678" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3656148" sideWeight="0.49573562" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3656148" sideWeight="0.49573562" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5064516" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1130,7 +1094,8 @@
     <MESSAGE value="finally can push?!" />
     <MESSAGE value="store" />
     <MESSAGE value="2d util v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="2d util v1" />
+    <MESSAGE value="before brute but concise" />
+    <option name="LAST_COMMIT_MESSAGE" value="before brute but concise" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1149,7 +1114,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/dp/leetcode/bfs/SurroundedRegions130/Solution.java</url>
-          <line>40</line>
+          <line>42</line>
           <properties />
           <option name="timeStamp" value="31" />
         </line-breakpoint>
@@ -1508,7 +1473,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dp/leetcode/bfs/SurroundedRegions130/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
+        <state relative-caret-position="508">
           <caret line="42" column="11" lean-forward="true" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
           <folding />
         </state>
@@ -1516,8 +1481,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dp/leetcode/bfs/SurroundedRegions130/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        <state relative-caret-position="286">
+          <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
           <folding />
         </state>
       </provider>
