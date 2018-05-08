@@ -1,4 +1,4 @@
-package dp.leetcode.bfs.Zigzag103;
+package bfs.leetcode.Zigzag103;
 
 import dp.leetcode.BinaryTreePostorderTraversal.TreeNode;
 

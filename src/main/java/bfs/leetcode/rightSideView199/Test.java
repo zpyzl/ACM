@@ -1,4 +1,4 @@
-package dp.leetcode.bfs.rightSideView199;
+package bfs.leetcode.rightSideView199;
 
 import dp.leetcode.BinaryTreePostorderTraversal.TreeNode;
 

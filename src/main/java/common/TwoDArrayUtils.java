@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by zhaopengyang on 2018/5/3.
  */
-public class Array2dUtils {
+public class TwoDArrayUtils {
     public static char[][] convertChars(String s){
         s = removeBracket(s);
         int arraysNum = s.split("],\\[").length;

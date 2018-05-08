@@ -1,4 +1,4 @@
-package dp.leetcode.bfs.NumberOfIslands200;
+package bfs.leetcode.NumberOfIslands200;
 
 
 import java.util.HashMap;

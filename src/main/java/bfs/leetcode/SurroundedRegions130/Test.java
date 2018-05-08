@@ -1,6 +1,6 @@
-package dp.leetcode.bfs.SurroundedRegions130;
+package bfs.leetcode.SurroundedRegions130;
 
-import common.Array2dUtils;
+import common.TwoDArrayUtils;
 
 /**
  * Created by zhaopengyang on 2018/5/3.
@@ -41,7 +41,7 @@ public class Test {
          * ["O","X","O","X","O","O"],
          * ["O","X","O","O","O","O"]]
          */
-        board = Array2dUtils.convertChars(s);
+        board = TwoDArrayUtils.convertChars(s);
 
         Solution solution = new Solution();
         solution.solve(board);

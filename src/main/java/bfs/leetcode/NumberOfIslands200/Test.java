@@ -1,4 +1,4 @@
-package dp.leetcode.bfs.NumberOfIslands200;
+package bfs.leetcode.NumberOfIslands200;
 
 /**
  * Created by zhaopengyang on 2018/5/2.

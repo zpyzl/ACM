@@ -1,4 +1,4 @@
-package dp.leetcode.bfs.SurroundedRegions130;
+package bfs.leetcode.SurroundedRegions130;
 
 /**
  *
