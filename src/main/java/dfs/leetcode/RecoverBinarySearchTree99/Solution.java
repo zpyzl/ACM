@@ -2,25 +2,45 @@ package dfs.leetcode.RecoverBinarySearchTree99;
 
 import dp.leetcode.BinaryTreePostorderTraversal.TreeNode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by zhaopengyang on 2018/5/7.
  */
 public class Solution {
-    int leftBiggest;
-    int mostPosition;
+    Integer first ;
+    Integer second ;
+    List<Integer> toSwap = new ArrayList<Integer>();
 
     public void recoverTree(TreeNode root) {
-        //every subtree whether violate bstree
+        traverse(root.left);
 
+
+        traverse(root.right);
     }
-    void check(TreeNode root){
 
-        int leftBiggest = getLeftBiggest();
-        if( leftBiggest > root.val){
-            //swap root and left child
+    private void traverse(TreeNode node) {
+        traverse(node.left);
 
+        if( first == null && second == null ){
+            first = node.val;
+        }else if( first != null && second == null ){
+            second = node.val;
+        }else {
+            first = second;
+            second = node.val;
+            if( first > second ){
+                toSwap.add();
+            }
         }
-        int rightSmallest ;
+
+        traverse(node.right);
+    }
+
+    private void visit(TreeNode node) {
 
     }
+
+
 }
